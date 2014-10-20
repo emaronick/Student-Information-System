@@ -38,7 +38,7 @@ public class Menus
 				break;
 			default:
 				{
-				System.out.println("I'm sorry, " + answer + " is not a valid entry. Please enter an integer between one and three.");
+				System.out.println("I'm sorry, " + answer + " is not a valid entry. Please enter an integer 1, 2, or 3.");
 				}
 				break;
 			}
@@ -55,7 +55,26 @@ public class Menus
 	
 	public static void determineAddOrDelete()
 		{
-		
+		Scanner keyboard = new Scanner(System.in);
+		answer = keyboard.nextInt();
+		switch(answer)
+			{
+			case 1:
+				{
+				AddStudent.addStudent();
+				}
+				break;
+			case 2:
+				{
+				
+				}
+				break;
+			default:
+				{
+				System.out.println("I'm sorry, " + answer + " is not a valid entry. Please enter an integer 1 or 2.");
+				}
+				break;
+			}
 		}
 	
 	public static void printChangeStudentGradesOrSchedulesMenu()
@@ -69,7 +88,26 @@ public class Menus
 	
 	public static void determineChangeStudentGradesOrSchedules()
 		{
-		
+		Scanner keyboard = new Scanner(System.in);
+		answer = keyboard.nextInt();
+		switch(answer)
+			{
+			case 1:
+				{
+				
+				}
+				break;
+			case 2:
+				{
+				
+				}
+				break;
+			default:
+				{
+				System.out.println("I'm sorry, " + answer + " is not a valid entry. Please enter an integer 1 or 2.");
+				}
+				break;
+			}
 		}
 	
 	public static void printSortStudentsMenu()
@@ -84,7 +122,31 @@ public class Menus
 	
 	public static void determineSortingForm()
 		{
-		
+		Scanner keyboard = new Scanner(System.in);
+		answer = keyboard.nextInt();
+		switch(answer)
+			{
+			case 1:
+				{
+				
+				}
+				break;
+			case 2:
+				{
+				
+				}
+				break;
+			case 3:
+				{
+				
+				}
+				break;
+			default:
+				{
+				System.out.println("I'm sorry, " + answer + " is not a valid entry. Please enter an integer 1, 2, or 3.");
+				}
+				break;
+			}
 		}
 	
 	}

@@ -4,8 +4,8 @@ public class StudentInformationSystemRunner
 
 	public static void main(String[] args)
 		{
-		// TODO Auto-generated method stub
-
+		Menus.printMainMenu();
+		Menus.determineSubMenu();
 		}
 
 	}

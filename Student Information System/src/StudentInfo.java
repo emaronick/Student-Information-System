@@ -1,16 +1,16 @@
 import java.util.*;
 import java.io.*;
 public class StudentInfo
-	{  private static String firstName;
-	   private static String lastName;
-	   private static double gpa;
-	   private static String period1;
-	   private static String grade1;
-	   private static String period2;
-	   private static String grade2;
-	   private static String period3;
-	   private static String grade3;
-	   private static ArrayList <StudentInfo>student= new ArrayList<StudentInfo>(); 
+	{  private  String firstName;
+	   private  String lastName;
+	   private  double gpa;
+	   private  String period1;
+	   private  String grade1;
+	   private  String period2;
+	   private  String grade2;
+	   private  String period3;
+	   private  String grade3;
+	  
 	    
 		
 	    public  StudentInfo( String fn, String ln, double g, String p1, String g1, String p2, String g2, String p3, String g3)
@@ -28,270 +28,139 @@ public class StudentInfo
 		
 			
 			}
-	    
-		public static String getFirstName()
+
+
+
+		public String getFirstName()
 			{
 			return firstName;
 			}
 
-		public static String getLastName()
+
+
+		public String getLastName()
 			{
 			return lastName;
 			}
 
-		public static double getGpa()
+
+
+		public double getGpa()
 			{
 			return gpa;
 			}
 
-		public static String getPeriod1()
+
+
+		public String getPeriod1()
 			{
 			return period1;
 			}
 
-		public static String getGrade1()
+
+
+		public String getGrade1()
 			{
 			return grade1;
 			}
 
-		public static String getPeriod2()
+
+
+		public String getPeriod2()
 			{
 			return period2;
 			}
 
-		public static String getGrade2()
+
+
+		public String getGrade2()
 			{
 			return grade2;
 			}
 
-		public static String getPeriod3()
+
+
+		public String getPeriod3()
 			{
 			return period3;
 			}
 
-		public static String getGrade3()
+
+
+		public String getGrade3()
 			{
 			return grade3;
 			}
 
 
-		public static void setFirstName(String firstName)
+
+		public void setFirstName(String firstName)
 			{
-			StudentInfo.firstName = firstName;
+			this.firstName = firstName;
 			}
 
-		public static void setLastName(String lastName)
+
+
+		public void setLastName(String lastName)
 			{
-			StudentInfo.lastName = lastName;
+			this.lastName = lastName;
 			}
 
-		public static void setGpa(double gpa)
+
+
+		public void setGpa(double gpa)
 			{
-			StudentInfo.gpa = gpa;
+			this.gpa = gpa;
 			}
 
-		public static void setPeriod1(String period1)
+
+
+		public void setPeriod1(String period1)
 			{
-			StudentInfo.period1 = period1;
+			this.period1 = period1;
 			}
 
-		public static void setGrade1(String grade1)
+
+
+		public void setGrade1(String grade1)
 			{
-			StudentInfo.grade1 = grade1;
+			this.grade1 = grade1;
 			}
 
-		public static void setPeriod2(String period2)
+
+
+		public void setPeriod2(String period2)
 			{
-			StudentInfo.period2 = period2;
+			this.period2 = period2;
 			}
 
-		public static void setGrade2(String grade2)
+
+
+		public void setGrade2(String grade2)
 			{
-			StudentInfo.grade2 = grade2;
+			this.grade2 = grade2;
 			}
 
-		public static void setPeriod3(String period3)
+
+
+		public void setPeriod3(String period3)
 			{
-			StudentInfo.period3 = period3;
+			this.period3 = period3;
 			}
 
-		public static void setGrade3(String grade3)
-			{
-			StudentInfo.grade3 = grade3;
-			}
 
+
+		public void setGrade3(String grade3)
+			{
+			this.grade3 = grade3;
+			}
+	    
 		
 		
 		
 		
 		
-		public static void main(String[] args) throws IOException
-		{
-		Scanner file= new Scanner (new File("studentlist.txt"));
-	    while(file.hasNextLine())
-	    	{
-	    	firstName=file.next();
-	    	lastName=file.next();
-	    	gpa=0.00;
-	    	period1=file.next();
-	    	grade1=file.next(); 
-	    	period2=file.next();
-	    	grade2=file.next(); 
-	    	period3=file.next();
-	    	grade3=file.next(); 
-	    	student.add(new StudentInfo(firstName,lastName,gpa,period1,grade1,period2,grade2,period3,grade3)); 
-	    	double newGPA= 0.00; 
-	    	if(grade1.equals("A+"))
-	    		{
-	    		newGPA=newGPA+ 4.30; 
-	    		}
-	    	else if(grade1.equals("A"))
-	    		{
-	    		newGPA=newGPA+ 4.00; 
-	    		}
-	    	else if(grade1.equals("A-"))
-	    		{
-	    		newGPA=newGPA+ 3.70; 
-	    		}
-	    	else if(grade1.equals("B+"))
-	    		{
-	    		newGPA=newGPA+ 3.30; 
-	    		}
-	    	else if(grade1.equals("B"))
-	    		{
-	    		newGPA=newGPA+ 3.00; 
-	    		}
-	    	else if(grade1.equals("B-"))
-	    		{
-	    		newGPA=newGPA+ 2.70; 
-	    		}
-	    	else if(grade1.equals("C+"))
-	    		{
-	    		newGPA=newGPA+ 2.30; 
-	    		}
-	    	else if(grade1.equals("C"))
-	    		{
-	    		newGPA=newGPA+ 2.00; 
-	    		}
-	    	else if(grade1.equals("C-"))
-	    		{
-	    		newGPA=newGPA+ 1.70; 
-	    		}
-	    	else if(grade1.equals("D+"))
-	    		{
-	    		newGPA=newGPA+ 3.30; 
-	    		}
-	    	else if(grade1.equals("D"))
-	    		{
-	    		newGPA=newGPA+ 3.00; 
-	    		}
-	    	else if(grade1.equals("D-"))
-	    		{
-	    		newGPA=newGPA+ 2.70; 
-	    		}
-	    	else newGPA= newGPA; 
-	    	if(grade2.equals("A+"))
-	    		{
-	    		newGPA=newGPA+ 4.30; 
-	    		}
-	    	else if(grade2.equals("A"))
-	    		{
-	    		newGPA=newGPA+ 4.00; 
-	    		}
-	    	else if(grade2.equals("A-"))
-	    		{
-	    		newGPA=newGPA+ 3.70; 
-	    		}
-	    	else if(grade2.equals("B+"))
-	    		{
-	    		newGPA=newGPA+ 3.30; 
-	    		}
-	    	else if(grade2.equals("B"))
-	    		{
-	    		newGPA=newGPA+ 3.00; 
-	    		}
-	    	else if(grade2.equals("B-"))
-	    		{
-	    		newGPA=newGPA+ 2.70; 
-	    		}
-	    	else if(grade2.equals("C+"))
-	    		{
-	    		newGPA=newGPA+ 2.30; 
-	    		}
-	    	else if(grade2.equals("C"))
-	    		{
-	    		newGPA=newGPA+ 2.00; 
-	    		}
-	    	else if(grade2.equals("C-"))
-	    		{
-	    		newGPA=newGPA+ 1.70; 
-	    		}
-	    	else if(grade2.equals("D+"))
-	    		{
-	    		newGPA=newGPA+ 3.30; 
-	    		}
-	    	else if(grade2.equals("D"))
-	    		{
-	    		newGPA=newGPA+ 3.00; 
-	    		}
-	    	else if(grade2.equals("D-"))
-	    		{
-	    		newGPA=newGPA+ 2.70; 
-	    		}
-	    	else newGPA= newGPA; 
-	    	if(grade3.equals("A+"))
-	    		{
-	    		newGPA=newGPA+ 4.30; 
-	    		}
-	    	else if(grade3.equals("A"))
-	    		{
-	    		newGPA=newGPA+ 4.00; 
-	    		}
-	    	else if(grade3.equals("A-"))
-	    		{
-	    		newGPA=newGPA+ 3.70; 
-	    		}
-	    	else if(grade3.equals("B+"))
-	    		{
-	    		newGPA=newGPA+ 3.30; 
-	    		}
-	    	else if(grade3.equals("B"))
-	    		{
-	    		newGPA=newGPA+ 3.00; 
-	    		}
-	    	else if(grade3.equals("B-"))
-	    		{
-	    		newGPA=newGPA+ 2.70; 
-	    		}
-	    	else if(grade3.equals("C+"))
-	    		{
-	    		newGPA=newGPA+ 2.30; 
-	    		}
-	    	else if(grade3.equals("C"))
-	    		{
-	    		newGPA=newGPA+ 2.00; 
-	    		}
-	    	else if(grade3.equals("C-"))
-	    		{
-	    		newGPA=newGPA+ 1.70; 
-	    		}
-	    	else if(grade3.equals("D+"))
-	    		{
-	    		newGPA=newGPA+ 3.30; 
-	    		}
-	    	else if(grade3.equals("D"))
-	    		{
-	    		newGPA=newGPA+ 3.00; 
-	    		}
-	    	else if(grade3.equals("D-"))
-	    		{
-	    		newGPA=newGPA+ 2.70; 
-	    		}
-	    	else newGPA= newGPA; 
-	    	newGPA=newGPA/3; 
-	    	}
-	    	
-	    	}
 		}
 
+	
 	

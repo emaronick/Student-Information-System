@@ -39,6 +39,7 @@ public class Menus
 			default:
 				{
 				System.out.println("I'm sorry, " + answer + " is not a valid entry. Please enter an integer 1, 2, or 3.");
+				AddStudent.deadEnd();
 				}
 				break;
 			}
@@ -72,6 +73,7 @@ public class Menus
 			default:
 				{
 				System.out.println("I'm sorry, " + answer + " is not a valid entry. Please enter an integer 1 or 2.");
+				AddStudent.deadEnd();
 				}
 				break;
 			}
@@ -105,6 +107,7 @@ public class Menus
 			default:
 				{
 				System.out.println("I'm sorry, " + answer + " is not a valid entry. Please enter an integer 1 or 2.");
+				AddStudent.deadEnd();
 				}
 				break;
 			}
@@ -144,6 +147,7 @@ public class Menus
 			default:
 				{
 				System.out.println("I'm sorry, " + answer + " is not a valid entry. Please enter an integer 1, 2, or 3.");
+				AddStudent.deadEnd();
 				}
 				break;
 			}

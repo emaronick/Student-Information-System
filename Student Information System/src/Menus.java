@@ -99,7 +99,7 @@ public class Menus
 				break;
 			case 2:
 				{
-				
+				SwitchClasses.switchClasses();
 				}
 				break;
 			default:

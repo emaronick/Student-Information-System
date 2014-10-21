@@ -1,7 +1,7 @@
 
 public class SwitchClasses
 	{
-	public static switchClasses()
+	public static void switchClasses()
 		{
 		
 		}

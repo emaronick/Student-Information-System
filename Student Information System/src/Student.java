@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Student
 	{
-	 private static ArrayList <StudentInfo>student= new ArrayList<StudentInfo>(); 
+	 public static ArrayList <StudentInfo>student= new ArrayList<StudentInfo>(); 
 	 public static void addStudent()throws IOException
 		 {
 		 Scanner file= new Scanner (new File("studentlist.txt"));

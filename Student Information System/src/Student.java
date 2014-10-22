@@ -7,7 +7,9 @@ public class Student
 	 public static ArrayList <StudentInfo>student= new ArrayList<StudentInfo>(); 
 	 public static void addStudent()throws IOException
 		 {
-		 Scanner file= new Scanner (new File("studentlist.txt"));
+		
+		 Scanner file= new Scanner (new File("studentlist.txt")); 
+		 
 		    while(file.hasNext())
 		    	{
 		    	String studentfirstName;
@@ -185,9 +187,6 @@ public class Student
 		    	studentgpa=newGPA; 
 		    	student.add(new StudentInfo(studentfirstName,studentlastName,studentgpa,studentperiod1,studentgrade1,studentperiod2,studentgrade2,studentperiod3,studentgrade3));
 		    	}
-		    	for(int i=0; i<student.size();i++)
-		    		{
-		    		System.out.println(student.get(i).getFirstName());
-		    		}
+		    	
 		 }
 	}

@@ -1,18 +1,29 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class AddStudent
 	{
-	private static String firstName, lastName, firstPeriod;
+	private static String firstName, lastName, firstPeriod, firstGrade, secondPeriod, secondGrade, thirdPeriod, thirdGrade;
 	private static double gPA;
-	private static int oneP;
+	private static int oneP, twoP;
+	private static ArrayList<String> subject = new ArrayList<String>();
 	
 	public static void addStudent()
 		{
 		promptAllInput();
+		makeStudentJoinClass();
+		}
+	
+	public static void makeStudentJoinClass()
+		{
+		StudentInfo.getStudent().add(new StudentInfo(firstName, lastName, gPA, firstPeriod, firstGrade, secondPeriod, secondGrade, thirdPeriod, thirdGrade));
 		}
 	
 	public static void promptAllInput()
 		{
+		subject.add("Biology");
+		subject.add("English");
+		subject.add("Algebra");
 		System.out.println("What is the first name of the new student?");
 		Scanner keyboard = new Scanner(System.in);
 		firstName = keyboard.nextLine();
@@ -26,35 +37,13 @@ public class AddStudent
 		System.out.println("What 1st period is the new student in?");
 		System.out.println();
 		System.out.println("Your options are:");
-		System.out.println("	1) Biology");
-		System.out.println("	2) English");
-		System.out.println("	3) Algebra");
-		oneP = keyboard.nextInt();
-		System.out.println();
-		switch(oneP)
+		for(int i = 0; i < subject.size(); i++)
 			{
-			case 1:
-				{
-				firstPeriod.equals("Biology");
-				}
-				break;
-			case 2:
-				{
-				firstPeriod.equals("English");
-				}
-				break;
-			case 3:
-				{
-				firstPeriod.equals("Algebra");
-				}
-				break;
-			default:
-				{
-				System.out.println("This is not an acceptable answer.");
-				deadEnd();
-				}
+			System.out.println("	" + (i + 1) + ") " + subject.get(i));
 			}
-		System.out.println("What is the GPA of the new student?");
+		oneP = keyboard.nextInt();
+		firstPeriod = subject.get(oneP - 1);
+		System.out.println(firstPeriod);
 		}
 	
 	public static void deadEnd()

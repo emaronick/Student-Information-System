@@ -182,11 +182,14 @@ public class Student
 		    		}
 		    	else newGPA= newGPA; 
 		    	newGPA= newGPA/3;
-		    	int intGPA= (int)newGPA*100;
-		    	newGPA=intGPA/100; 
+		    	int intGPA= (int)(newGPA*100);
+		    	newGPA=intGPA/100.00; 
 		    	studentgpa=newGPA; 
 		    	student.add(new StudentInfo(studentfirstName,studentlastName,studentgpa,studentperiod1,studentgrade1,studentperiod2,studentgrade2,studentperiod3,studentgrade3));
+		    	
 		    	}
+		    
 		    	
 		 }
+	
 	}

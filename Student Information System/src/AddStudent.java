@@ -16,7 +16,7 @@ public class AddStudent
 	
 	public static void makeStudentJoinClass()
 		{
-		Student.getStudent().add(new StudentInfo(firstName, lastName, gPA, firstPeriod, firstGrade, secondPeriod, secondGrade, thirdPeriod, thirdGrade));
+		Student.student.add(new StudentInfo(firstName, lastName, gPA, firstPeriod, firstGrade, secondPeriod, secondGrade, thirdPeriod, thirdGrade));
 		}
 	
 	public static void promptAllInput()
@@ -43,7 +43,27 @@ public class AddStudent
 			}
 		oneP = keyboard.nextInt();
 		firstPeriod = subject.get(oneP - 1);
-		System.out.println(firstPeriod);
+		subject.remove(oneP - 1);
+		System.out.println("What is the student's grade for " + firstPeriod + "?");
+		Scanner keyboard2 = new Scanner(System.in);
+		firstGrade = keyboard2.nextLine();
+		System.out.println();
+		System.out.println("What 2nd period is the new student in?");
+		System.out.println();
+		System.out.println("Your options are:");
+		for(int i = 0; i < subject.size(); i++)
+			{
+			System.out.println("	" + (i + 1) + ") " + subject.get(i));
+			}
+		twoP = keyboard.nextInt();
+		secondPeriod = subject.get(twoP - 1);
+		subject.remove(twoP - 1);
+		thirdPeriod = subject.get(0);
+		System.out.println("What is the student's grade for " + secondPeriod + "?");
+		secondGrade = keyboard2.nextLine();
+		System.out.println("The student's third period will be " + thirdPeriod + ".");
+		System.out.println("What is the student's grade for " + thirdPeriod + "?");
+		thirdGrade = keyboard2.nextLine();
 		}
 	
 	public static void deadEnd()

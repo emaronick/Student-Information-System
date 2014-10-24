@@ -5,15 +5,18 @@ import java.io.*;
 public class Student
 	{
 	 public static ArrayList <StudentInfo>student= new ArrayList<StudentInfo>(); 
+	 
 	 public static ArrayList<StudentInfo> getStudent()
 		{
 		return student;
 		}
-	public static void setStudent(ArrayList<StudentInfo> student)
+	
+	 public static void setStudent(ArrayList<StudentInfo> student)
 		{
 		Student.student = student;
 		}
-	public static void addStudent()throws IOException
+	
+	 public static void addStudent()throws IOException
 		 {
 		
 		 Scanner file= new Scanner (new File("studentlist.txt")); 

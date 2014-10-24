@@ -16,7 +16,7 @@ public class AddStudent
 	
 	public static void makeStudentJoinClass()
 		{
-		StudentInfo.getStudent().add(new StudentInfo(firstName, lastName, gPA, firstPeriod, firstGrade, secondPeriod, secondGrade, thirdPeriod, thirdGrade));
+		Student.getStudent().add(new StudentInfo(firstName, lastName, gPA, firstPeriod, firstGrade, secondPeriod, secondGrade, thirdPeriod, thirdGrade));
 		}
 	
 	public static void promptAllInput()
